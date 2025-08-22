@@ -29,5 +29,9 @@ public class ItemGroups {
         tabData.accept(FabulousBladesItems.REFORGE_TEMPLATE_SWORD_CLAYMORE.get());
         tabData.accept(FabulousBladesItems.REFORGE_TEMPLATE_SWORD_LONGBLADE.get());
         tabData.accept(FabulousBladesItems.REFORGE_TEMPLATE_SWORD_KATANA.get());
+        tabData.accept(FabulousBladesItems.HEALTHEATER.get());
+        tabData.accept(FabulousBladesItems.EVE_OF_DAWN.get());
+        tabData.accept(FabulousBladesItems.DANCERS_WISH.get());
+        tabData.accept(FabulousBladesItems.JUDGMENT_FLAME.get());
     }).build());
 }
