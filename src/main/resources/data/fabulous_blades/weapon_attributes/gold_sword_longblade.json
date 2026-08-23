@@ -25,13 +25,13 @@
         }
       },
       {
-        "hitbox": "HORIZONTAL_PLANE",
+        "hitbox": "VERTICAL_PLANE",
         "damage_multiplier": 1.5,
-        "angle": 90,
+        "angle": 70,
         "upswing": 0.5,
-        "animation": "bettercombat:two_handed_slash_horizontal_left",
+        "animation": "bettercombat:two_handed_slash_vertical_right",
         "swing_sound": {
-          "id": "bettercombat:katana_slash"
+          "id": "bettercombat:sword_slash"
         }
       }
     ]
