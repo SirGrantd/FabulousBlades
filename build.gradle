@@ -13,8 +13,19 @@ neoForge {
     version = "21.1.93"
 
     runs {
-        client {
+        main_client {
             client()
+            gameDirectory = file("run/1.21.1/main_client")
+            programArgument "--username=MainDev"
+            jvmArgument "-Xms512m"
+            jvmArgument "-Xmx2G"
+            jvmArgument "-XX:+UseG1GC"
+            jvmArgument "-Dfile.encoding=UTF-8"
+        }
+        off_client {
+            client()
+            gameDirectory = file("run/1.21.1/off_client")
+            programArgument "--username=AltDev"
             jvmArgument "-Xms512m"
             jvmArgument "-Xmx2G"
             jvmArgument "-XX:+UseG1GC"
@@ -22,6 +33,8 @@ neoForge {
         }
         server {
             server()
+            gameDirectory = file("run/1.21.1/server")
+            programArgument "--nogui"
         }
 
         configureEach {
