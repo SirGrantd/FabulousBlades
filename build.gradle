@@ -9,22 +9,24 @@ base.archivesName = mod_id
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
+def mcVer = project.findProperty('minecraft_version_range')?.replaceAll('[\\[\\]()]', '') ?: '1.21.1'
+
 neoForge {
     version = "21.1.93"
 
     runs {
-        main_client {
+        client {
             client()
-            gameDirectory = file("run/1.21.1/main_client")
+            gameDirectory = file("run/${mcVer}/main_client")
             programArgument "--username=MainDev"
             jvmArgument "-Xms512m"
             jvmArgument "-Xmx2G"
             jvmArgument "-XX:+UseG1GC"
             jvmArgument "-Dfile.encoding=UTF-8"
         }
-        off_client {
+        client2 {
             client()
-            gameDirectory = file("run/1.21.1/off_client")
+            gameDirectory = file("run/${mcVer}/off_client")
             programArgument "--username=AltDev"
             jvmArgument "-Xms512m"
             jvmArgument "-Xmx2G"
@@ -33,7 +35,7 @@ neoForge {
         }
         server {
             server()
-            gameDirectory = file("run/1.21.1/server")
+            gameDirectory = file("run/${mcVer}/server")
             programArgument "--nogui"
         }
 
